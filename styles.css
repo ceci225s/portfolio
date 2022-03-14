@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --color-blue: #001dff;
+  --color-red: #ff221f;
+  --color-peach: #fe5f5f;
+  --color-pink: #fceaee;
+  --color-white: #fcf9f9;
+}
+
+body {
+  background-color: var(--color-pink);
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 40%;
+}
+
+img:hover {
+  opacity: 100%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+}
+
+h1 {
+  font-family: azo-sans-web, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: var(--color-red);
+  font-size: 5rem;
+  margin-bottom: 7rem;
+}
+
+.h1stroke {
+  color: var(--color-pink);
+  -webkit-text-stroke: 1.5px var(--color-red);
+}
+
+.h1blue {
+  color: var(--color-peach);
+}
+
+h2 {
+  font-family: azo-sans-web, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: var(--color-pink);
+  font-size: 4rem;
+  position: absolute;
+}
+
+p {
+  font-family: ingra, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  text-decoration: none;
+  color: #ff221f;
+  margin-bottom: 7rem;
+}
+
+a {
+  font-family: ingra, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  text-decoration: none;
+  color: #ff221f;
+}
+
+/*********************************************************** HEADER MOBILE */
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  z-index: 100;
+  background-color: var(--color-pink);
+}
+
+/* header .logo img {
+  margin-bottom: 0;
+  margin-top: 0;
+  border: none;
+  width: var(--space-xxxl);
+} */
+
+/* header .logo {
+  display: flex;
+  place-content: center;
+  margin-bottom: var(--space-md);
+} */
+
+header nav ul {
+  display: flex;
+  place-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+/*********************************************************** HEADER DESKTOP */
+
+@media (min-width: 1000px) {
+  header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    /* grid-template-rows: 2rem 2rem; */
+    height: 5rem;
+  }
+
+  header div {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    /* margin-top: 6rem; */
+  }
+
+  header nav {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    /* margin-top: 6rem; */
+  }
+
+  /*********************************************************** SECTION_ONE DESKTOP */
+
+  .section_one {
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: auto;
+    padding-top: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .section_one .intro {
+    grid-column: 1/4;
+  }
+
+  /*********************************************************** SECTION_TWO DESKTOP */
+
+  .section_two {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    /* grid-gap: 2rem; */
+    margin-bottom: 7rem;
+  }
+
+  .card_one {
+    grid-column: 1/2;
+    /* grid-row: 1/2; */
+    background-color: var(--color-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card_two {
+    grid-column: 2/3;
+    /* grid-row: 2/3; */
+    background-color: var(--color-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card_three {
+    grid-column: 1/2;
+    /* grid-row: 3/4; */
+    background-color: var(--color-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card_four {
+    grid-column: 2/3;
+    /* grid-row: 4/5; */
+    background-color: var(--color-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card_five {
+    grid-column: 1/2;
+    /* grid-row: 4/5; */
+    background-color: var(--color-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card_six {
+    grid-column: 2/3;
+    /* grid-row: 4/5; */
+    background-color: var(--color-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*********************************************************** SECTION_THREE DESKTOP */
+
+  .section_three {
+    grid-column: 2/4;
+    display: grid;
+    height: auto;
+    padding-top: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .section_three .intro {
+  }
+}
