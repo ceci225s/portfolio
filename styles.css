@@ -21,10 +21,6 @@ img {
   opacity: 40%;
 }
 
-img:hover {
-  opacity: 100%;
-}
-
 main {
   display: grid;
   grid-template-columns: 1fr minmax(0, 1200px) 1fr;
@@ -35,13 +31,14 @@ h1 {
   font-weight: 900;
   font-style: normal;
   color: var(--color-red);
-  font-size: 5rem;
-  margin-bottom: 7rem;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
 }
 
 .h1stroke {
   color: var(--color-pink);
-  -webkit-text-stroke: 1.5px var(--color-red);
+  -webkit-text-stroke: 1px var(--color-red);
 }
 
 .h1blue {
@@ -53,7 +50,7 @@ h2 {
   font-weight: 900;
   font-style: normal;
   color: var(--color-pink);
-  font-size: 4rem;
+  font-size: 3rem;
   position: absolute;
 }
 
@@ -107,26 +104,106 @@ header nav ul {
   overflow-x: auto;
 }
 
-/*********************************************************** HEADER DESKTOP */
+/*********************************************************** SECTION ONE MOBILE */
+
+.section_one {
+  grid-column: 1/4;
+}
+
+/*********************************************************** SECTION TWO MOBILE */
+
+.section_two {
+  grid-column: 2/3;
+}
+
+.card_one {
+  grid-column: 1/2;
+  background-color: var(--color-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_two {
+  grid-column: 2/3;
+  background-color: var(--color-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_three {
+  grid-column: 1/2;
+  background-color: var(--color-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_four {
+  grid-column: 2/3;
+  background-color: var(--color-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_five {
+  grid-column: 1/2;
+  background-color: var(--color-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_six {
+  grid-column: 2/3;
+  background-color: var(--color-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*********************************************************** GENERAL DESKTOP */
 
 @media (min-width: 1000px) {
+  h1 {
+    font-family: azo-sans-web, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: var(--color-red);
+    font-size: 5rem;
+    margin-bottom: 7rem;
+  }
+
+  .h1stroke {
+    -webkit-text-stroke: 1.5px var(--color-red);
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  img:hover {
+    opacity: 100%;
+  }
+
+  /*********************************************************** HEADER DESKTOP */
+
   header {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    /* grid-template-rows: 2rem 2rem; */
     height: 5rem;
   }
 
   header div {
     grid-column: 1/2;
     grid-row: 2/3;
-    /* margin-top: 6rem; */
   }
 
   header nav {
     grid-column: 3/4;
     grid-row: 2/3;
-    /* margin-top: 6rem; */
   }
 
   /*********************************************************** SECTION_ONE DESKTOP */
@@ -150,63 +227,6 @@ header nav ul {
     grid-column: 2/3;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
-    /* grid-gap: 2rem; */
-    margin-bottom: 7rem;
-  }
-
-  .card_one {
-    grid-column: 1/2;
-    /* grid-row: 1/2; */
-    background-color: var(--color-red);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .card_two {
-    grid-column: 2/3;
-    /* grid-row: 2/3; */
-    background-color: var(--color-red);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .card_three {
-    grid-column: 1/2;
-    /* grid-row: 3/4; */
-    background-color: var(--color-red);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .card_four {
-    grid-column: 2/3;
-    /* grid-row: 4/5; */
-    background-color: var(--color-red);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .card_five {
-    grid-column: 1/2;
-    /* grid-row: 4/5; */
-    background-color: var(--color-red);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .card_six {
-    grid-column: 2/3;
-    /* grid-row: 4/5; */
-    background-color: var(--color-red);
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   /*********************************************************** SECTION_THREE DESKTOP */
@@ -217,8 +237,5 @@ header nav ul {
     height: auto;
     padding-top: 3rem;
     margin-bottom: 4rem;
-  }
-
-  .section_three .intro {
   }
 }
