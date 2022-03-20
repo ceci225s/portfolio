@@ -265,6 +265,9 @@ footer {
   width: 100vw;
   height: 20vh;
   background-color: var(--color-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /*********************************************************** GENERAL DESKTOP */
 
@@ -325,6 +328,11 @@ footer {
 
   .section_one .intro {
     grid-column: 1/4;
+    margin-left: 4rem;
+  }
+
+  .highlight {
+    margin-left: 4rem;
   }
 
   .marquee {
@@ -384,7 +392,6 @@ footer {
     grid-template-columns: 1fr 1fr;
     margin: 0;
     grid-gap: 1rem;
-    background-color: var(--color-blue);
     padding-bottom: 1rem;
   }
 
@@ -523,28 +530,10 @@ footer {
     font-size: 4rem;
   }
 
-  .hover:hover {
-    color: var(--color-pink);
-  }
-
   /*********************************************************** BUTTON HOVER DESKTOP */
 
   button:hover {
     box-shadow: 8px 8px var(--color-red), 16px 16px var(--color-peach);
     transition: 0.3s;
-  }
-
-  /*********************************************************** FOOTER DESKTOP */
-
-  footer {
-    height: 30vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  footer a {
-    color: var(--color-pink);
   }
 }
