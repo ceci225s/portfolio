@@ -31,7 +31,7 @@ h1 {
   font-weight: 900;
   font-style: normal;
   color: var(--color-red);
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 5rem;
   margin-top: 5rem;
 }
@@ -42,8 +42,7 @@ h1 {
 }
 
 .h3stroke {
-  color: var(--color-blue);
-  -webkit-text-stroke: 1px var(--color-pink);
+  display: none;
 }
 
 .h1blue {
@@ -54,8 +53,8 @@ h2 {
   font-family: azo-sans-web, sans-serif;
   font-weight: 900;
   font-style: normal;
-  color: var(--color-peach);
-  font-size: 3rem;
+  color: var(--color-blue);
+  font-size: 1.5rem;
   position: absolute;
 }
 
@@ -71,13 +70,11 @@ p {
   font-family: ingra, sans-serif;
   font-weight: 200;
   font-style: normal;
-  text-decoration: none;
-  color: var(--color-red);
-  margin-bottom: 7rem;
 }
 
 .project_p {
   color: var(--color-pink);
+  margin-bottom: 0;
 }
 
 a {
@@ -85,19 +82,31 @@ a {
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
-  color: #ff221f;
+  color: var(--color-red);
   font-size: 1.5rem;
 }
 
-/* button {
+button {
+  border: 2px solid var(--color-red);
+  background-color: var(--color-blue);
+  border: 2px solid var(--color-red);
+  width: 14rem;
+  border-radius: 50px;
   height: 3rem;
-  width: 12rem;
-  background-color: var(--color-red);
-  border: none;
-  color: var(--color-pink);
-  box-shadow: 5px 5px var(--color-pink);
-} */
+  transition: 0.3s;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
 
+button a {
+  font-family: ingra, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  text-decoration: none;
+  color: var(--color-pink);
+  font-size: 1rem;
+}
 /*********************************************************** HEADER MOBILE */
 
 header {
@@ -125,18 +134,36 @@ header nav ul {
 /*********************************************************** SECTION ONE MOBILE */
 
 .section_one {
+  /* grid-column: 1/4; */
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/*********************************************************** MARQUEE MOBILE */
+
+.marquee {
+  display: none;
   grid-column: 1/4;
+  height: 4rem;
+  overflow: hidden;
+  position: relative;
+  background: var(--color-blue);
 }
 
 /*********************************************************** SECTION TWO MOBILE */
 
 .section_two {
-  grid-column: 2/3;
+  grid-column: 1/4;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.section_two img {
+  margin-top: 2rem;
 }
 
 .card_one {
   grid-column: 1/2;
-  background-color: var(--color-red);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,7 +171,6 @@ header nav ul {
 
 .card_two {
   grid-column: 2/3;
-  background-color: var(--color-red);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,7 +178,6 @@ header nav ul {
 
 .card_three {
   grid-column: 1/2;
-  background-color: var(--color-red);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,23 +185,6 @@ header nav ul {
 
 .card_four {
   grid-column: 2/3;
-  background-color: var(--color-red);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card_five {
-  grid-column: 1/2;
-  background-color: var(--color-red);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card_six {
-  grid-column: 2/3;
-  background-color: var(--color-red);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,13 +193,79 @@ header nav ul {
 /*********************************************************** SECTION THREE MOBILE */
 
 .section_three {
-  grid-column: 2/4;
+  grid-column: 1/4;
   display: grid;
   height: auto;
   padding-top: 3rem;
   margin-bottom: 4rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
+.section_one_p {
+  grid-column: 1/4;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.section_two_p {
+  margin-top: 2rem;
+  grid-column: 1/4;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  background-color: var(--color-blue);
+}
+
+.h2_two {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.text {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.section_four_p {
+  grid-column: 1/4;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.section_four_p img {
+  margin-top: 1rem;
+}
+
+.detail_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section_three_p {
+  grid-column: 1/4;
+  display: flex;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-blue);
+  margin-top: 5rem;
+}
+
+.section_three_p a {
+  color: var(--color-pink);
+}
+
+footer {
+  width: 100vw;
+  height: 20vh;
+  background-color: var(--color-blue);
+}
 /*********************************************************** GENERAL DESKTOP */
 
 @media (min-width: 1000px) {
@@ -200,8 +274,8 @@ header nav ul {
     font-weight: 900;
     font-style: normal;
     color: var(--color-red);
-    font-size: 5rem;
-    margin-bottom: 7rem;
+    font-size: 4.5rem;
+    margin-bottom: 5rem;
   }
 
   .h1stroke {
@@ -209,16 +283,23 @@ header nav ul {
   }
 
   h2 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   h3 {
     font-size: 3rem;
   }
 
-  /* img:hover {
-    opacity: 100%;
-  } */
+  .h3stroke {
+    display: unset;
+    color: var(--color-blue);
+    -webkit-text-stroke: 1px var(--color-pink);
+  }
+
+  button {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
   /*********************************************************** HEADER DESKTOP */
 
@@ -235,11 +316,10 @@ header nav ul {
   /*********************************************************** SECTION_ONE DESKTOP */
 
   .section_one {
-    grid-column: 2/4;
+    grid-column: 1/4;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     height: auto;
-    padding-top: 3rem;
     margin-bottom: 4rem;
   }
 
@@ -247,13 +327,69 @@ header nav ul {
     grid-column: 1/4;
   }
 
+  .marquee {
+    display: unset;
+    grid-column: 1/4;
+    height: 5rem;
+  }
+
+  .marquee h3 {
+    margin-top: 0.7rem;
+    text-align: center;
+    -moz-transform: translateX(35%);
+    -webkit-transform: translateX(35%);
+    transform: translateX(35%);
+    -moz-animation: bouncing-text 5s linear infinite alternate;
+    -webkit-animation: bouncing-text 5s linear infinite alternate;
+    animation: bouncing-text 5s linear infinite alternate;
+    font-size: 2.5rem;
+  }
+
+  @-moz-keyframes bouncing-text {
+    0% {
+      -moz-transform: translateX(10%);
+    }
+    100% {
+      -moz-transform: translateX(-10%);
+    }
+  }
+
+  @-webkit-keyframes bouncing-text {
+    0% {
+      -webkit-transform: translateX(10%);
+    }
+    100% {
+      -webkit-transform: translateX(-10%);
+    }
+  }
+
+  @keyframes bouncing-text {
+    0% {
+      -moz-transform: translateX(35%);
+      -webkit-transform: translateX(35%);
+      transform: translateX(35%);
+    }
+    100% {
+      -moz-transform: translateX(-35%);
+      -webkit-transform: translateX(-35%);
+      transform: translateX(-35%);
+    }
+  }
+
   /*********************************************************** SECTION_TWO DESKTOP */
 
   .section_two {
-    grid-column: 2/3;
+    grid-column: 1/4;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 3rem;
+    margin: 0;
+    grid-gap: 1rem;
+    background-color: var(--color-blue);
+    padding-bottom: 1rem;
+  }
+
+  .section_two img {
+    margin: 0;
   }
 
   /*********************************************************** SECTION_THREE DESKTOP */
@@ -272,6 +408,13 @@ header nav ul {
     width: auto;
   }
 
+  .mockup_phone {
+    position: absolute;
+    width: auto;
+    height: 50%;
+    bottom: -10;
+  }
+
   .section_two_p {
     margin-top: 10rem;
     grid-column: 1/4;
@@ -287,6 +430,16 @@ header nav ul {
     grid-row: 2/3;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .project_p {
+    color: var(--color-pink);
+    margin-bottom: 5.5rem;
+  }
+
+  .h2_two {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   /*********************************************************** SECTION_FOUR_P DESKTOP */
@@ -316,6 +469,12 @@ header nav ul {
     height: 40vh;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
+    margin-top: 5rem;
+  }
+
+  .section_three_p a {
+    color: var(--color-red);
   }
 
   .headings {
@@ -364,18 +523,28 @@ header nav ul {
     font-size: 4rem;
   }
 
-  button {
-    border: 2px solid var(--color-red);
-    background-color: var(--color-blue);
-    border: 2px solid var(--color-red);
-    width: 14rem;
-    border-radius: 50px;
-    height: 3rem;
-    color: #fff;
+  .hover:hover {
+    color: var(--color-pink);
+  }
+
+  /*********************************************************** BUTTON HOVER DESKTOP */
+
+  button:hover {
+    box-shadow: 8px 8px var(--color-red), 16px 16px var(--color-peach);
     transition: 0.3s;
   }
-  button:hover {
-    box-shadow: 8px 8px var(--color-red);
-    transition: 0.3s;
+
+  /*********************************************************** FOOTER DESKTOP */
+
+  footer {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer a {
+    color: var(--color-pink);
   }
 }
